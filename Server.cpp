@@ -111,12 +111,12 @@ Json::Value Server::radioPlugins()
 	Json::Value params;
 	params.append("");
 	Json::Value query;
-	query.append("radios");
+	query.append("apps");
 	query.append("0"); // <start>
 	query.append(cMaxResponseItems); // <itemsPerResponse>
 	params.append(query);
 
-	return mClient.CallMethod("slim.request", params)["radioss_loop"];
+	return mClient.CallMethod("slim.request", params)["appss_loop"];
 }
 
 Json::Value Server::folders(const string& folderId)
